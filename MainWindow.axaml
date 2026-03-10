@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PomodoroApp.MainWindow"
+        Title="PomodoroApp"
+        Width="380" Height="250"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen">
+
+    <StackPanel Margin="20" Spacing="15">
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20">
+            <StackPanel Orientation="Horizontal" Spacing="5" VerticalAlignment="Center">
+                <Label x:Name="lblRad" Content="Rad (min):" VerticalAlignment="Center"/>
+                <TextBox x:Name="tbRad" Text="25" Width="50" TextAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Spacing="5" VerticalAlignment="Center">
+                <Label x:Name="lblOdmor" Content="Odmor (min):" VerticalAlignment="Center"/>
+                <TextBox x:Name="tbOdmor" Text="5" Width="50" TextAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Label x:Name="lblVrijeme" Content="25:00"
+               HorizontalAlignment="Center"
+               HorizontalContentAlignment="Center"
+               FontSize="64" FontWeight="Bold"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+            <Button x:Name="btnStartStop" Content="Start" Width="100"
+                    Click="BtnStartStop_Click"/>
+            <Button x:Name="btnReset" Content="Reset" Width="100"
+                    Click="BtnReset_Click"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>
